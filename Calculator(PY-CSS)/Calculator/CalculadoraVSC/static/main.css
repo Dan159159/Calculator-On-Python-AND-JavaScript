@@ -40,7 +40,7 @@ body{
     border: 1px solid rgba(255, 255, 255, 0.01);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
-    font-size: 35px;
+    font-size: 37.5px;
     overflow: auto; /*to clip the content or to add scrollbars when the content of an element is too big to fit in the specified area.*/
     padding: 20px;
     text-align: right;
