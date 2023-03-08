@@ -4,16 +4,12 @@ app = Flask(__name__)
 # Funciones para las operaciones
 def suma(num1, num2):
     result = num1 + num2
-    return result
-
 def resta(num1, num2):
     result = num1 - num2
     return result
-
 def dividir(num1, num2):
     result = num1 / num2
     return result
-
 def multi(num1, num2):
     result = num1 * num2
     return result
@@ -45,35 +41,36 @@ def index():
             if result == '':
                 result = 0.0
         elif button_value == 'suma':
+            operation = 'suma'
             num1 = result
             result = float(request.form.get("",0))
             result = 0.0  # reiniciar result
-            operation = 'suma'
-        elif button_value == '-':
+        elif button_value == 'minus':
+            operation = 'minus'
             num1 = result
             result = float(request.form.get("",0))
-            operation = 'resta'
-        elif button_value == '&times;':
-            num1 = result
-            result = ''
+
+        elif button_value == 'multi':
             operation = 'multi'
-        elif button_value == '&divide;':
             num1 = result
-            result = ''
+            result = float(request.form.get("",0))
+
+        elif button_value == 'dividir':
             operation = 'dividir'
+            num1 = result
+            result = float(request.form.get("",0))
         elif button_value == 'igual':
             num2 = result
             if operation == 'suma':
                 result = float(request.form.get('result', suma(num1, num2)))
-            elif operation == 'resta':
-                result = resta(num1, num2)
+            elif operation == 'minus':
+                result = float(resta(num1, num2))
             elif operation == 'multi':
                 result = multi(num1, num2)
             elif operation == 'dividir':
                 result = dividir(num1, num2)
-            result = str(result)
         else:
-            result = result * 10 + int(button_value)
+            result = result * 10 + float(button_value)
     else:
         result = 0
 
