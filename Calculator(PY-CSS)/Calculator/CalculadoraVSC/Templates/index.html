@@ -16,12 +16,13 @@
             {{ result }}
         </section>
         <section class="calc-buttons">
-            <form method="post" action="/press_button">
+            <form method="post" action="/Calculator-BY:Dan">
                 <!--Creamos un input oculto para llevar// Create a shadow input to do the operations.
                 --the value of the button are the text is going to have the textLabel-->
                 <input type="hidden" name="result" value="{{ result }}" id="result">
                 <input type="hidden" name="num1" value="{{ num1 }}" id="num1">
                 <input type="hidden" name="num2" value="{{ num2 }}" id="num2">
+                <input type="hidden" name="operation" value="{{ operatio }}" id="operatio">
                 <div class="calc-button-row">
                     <button class="calc-button double" name="button" value="C">
                         C
@@ -29,7 +30,7 @@
                     <button class="calc-button" name="button" value="borrar">
                         &larr;
                     </button>
-                    <button class="calc-button" name="" value="dividir">
+                    <button class="calc-button" name="button" value="dividir">
                         &divide;
                     </button>
                 </div>
