@@ -20,6 +20,8 @@
                 <!--Creamos un input oculto para llevar// Create a shadow input to do the operations.
                 --the value of the button are the text is going to have the textLabel-->
                 <input type="hidden" name="result" value="{{ result }}" id="result">
+                <input type="hidden" name="num1" value="{{ num1 }}" id="num1">
+                <input type="hidden" name="num2" value="{{ num2 }}" id="num2">
                 <div class="calc-button-row">
                     <button class="calc-button double" name="button" value="C">
                         C
@@ -41,7 +43,7 @@
                     <button class="calc-button" name="button" value="9">
                         9
                     </button>
-                    <button class="calc-button" name="" value="multi">
+                    <button class="calc-button" name="button" value="multi">
                         &times;
                     </button>
                 </div>
